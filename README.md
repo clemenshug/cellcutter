@@ -34,7 +34,7 @@ positional arguments:
   DESTINATION           Path to a new directory where cell thumbnails will be stored in Zarr
                         format.
 
-options:
+optional arguments:
   -h, --help            show this help message and exit
   -p P                  Number of processes run in parallel.
   -z                    Store thumbnails in a single zip file instead of a directory.
@@ -52,13 +52,14 @@ options:
                         determined automatically using the chunk size parameter. Setting this
                         option overrides the chunk size parameter.
   --cache-size CACHE_SIZE
-                        Cache size for reading image tiles in MB. For best performance the
-                        cache size should be larger than the size of the image. (Default: 10240 MB
-                        = 10 GB)
+                        Cache size for reading image tiles in MB. For best performance the cache
+                        size should be larger than the size of the image. (Default: 10240 MB = 10
+                        GB)
   --channels [CHANNELS ...]
                         Indices of channels (1-based) to include in the output e.g., --channels 1
-                        3 5. Default is to include all channels. This option must be *after* all
-                        positional arguments.
+                        3 5. Channels are included in the file in the given order. If not
+                        specified, by default all channels are included.This option must be
+                        *after* all positional arguments.
 ```
 
 ## Example
